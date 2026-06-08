@@ -9,7 +9,7 @@
 <?php get_header(); ?>
 <main>
 <body>
-
+    <?=get_the_content();?>
     <section class="tekst">
         <h1>AI of Echt?</h1>
         <p>Leer AI-content en nepnieuws herkennen voordat je het deelt.</p>
