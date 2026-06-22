@@ -6,13 +6,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     border-bottom: 2px solid black;
-
-    position: sticky;
+     position: sticky;
     top: 0;
-
-    background-color: rgb(208, 193, 175);
+     background-color: rgb(208, 193, 175);
 
 
 }
@@ -66,5 +63,11 @@ header {
 
 .wp-element-button:Hover{
 transform: scale(1.05);
+}
+
+.wp-block-button__link {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
