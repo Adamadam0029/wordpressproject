@@ -12,9 +12,15 @@
 <header>
     <?php echo get_template_directory_uri(); ?>
     <div>
+<<<<<<< Updated upstream
         <a href="<?php echo home_url(); ?>">
             <img class="foto1" src="<?php echo get_template_directory_uri(); ?>/fotos/Image11.png">
         </a>
+=======
+        <a href="index.html">
+    <img class="foto1" href="index.html" img src="wp-content/themes/wordpressproject/fotos/image11.png" alt="Logo">
+    </a>
+>>>>>>> Stashed changes
     </div>
 
     <nav class="header1">
