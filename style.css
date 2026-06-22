@@ -65,8 +65,8 @@ header {
 transform: scale(1.05);
 }
 
-.wp-block-button__link {
-    display: flex;
+.wp-block-button__link wp-element-button {
+    display: inline !important;
     justify-content: center;
     gap: 20px;
 }
