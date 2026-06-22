@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-
-<?php get_header(); ?>
-
-=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +8,6 @@
 </head>
 <?= get_header(); ?>
 <?= get_the_content(); ?>
->>>>>>> Stashed changes
 <main>
 
 
@@ -24,15 +17,10 @@
         <a href="<?php  echo get_field("url-cta-1"); ?>" class="wp-block-button__link wp-element-button"><?php  echo get_field("url-cta-1"); ?></a>
         <a href="<?php  echo get_field("url-cta-1"); ?>" class="wp-block-button__link wp-element-button"><?php  echo get_field("url-cta-1"); ?></a>
 
-<<<<<<< Updated upstream
 
 
 </div>
 
-=======
-<?php get_header(); ?>
-
->>>>>>> origin/main
 <?php
 while (have_posts()) :
     the_post();
@@ -45,7 +33,6 @@ endwhile;
 <script src="<?php echo get_template_directory_uri(); ?>/script.js"></script>
 
 <?php get_footer(); ?>
-=======
         <span>AI & Nepnieuws</span>
         <img src="wp-content/themes/wordpressproject/fotos/image11.png" alt="Logo">
 
@@ -63,8 +50,6 @@ endwhile;
 
         <span>AI & Nepnieuws</span>
         <<img src="wp-content/themes/wordpressproject/fotos/image11.png" alt="Logo">
-
-        <!-- Dubbel voor vloeiende loop -->
 
         <span>AI & Nepnieuws</span>
         <img src="wp-content/themes/wordpressproject/fotos/image11.png" alt="Logo">
@@ -137,4 +122,3 @@ endwhile;
 
 </script>
 </main>
->>>>>>> Stashed changes
