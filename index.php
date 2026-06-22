@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 
 <?php get_header(); ?>
@@ -28,6 +29,10 @@
 
 </div>
 
+=======
+<?php get_header(); ?>
+
+>>>>>>> origin/main
 <?php
 while (have_posts()) :
     the_post();
