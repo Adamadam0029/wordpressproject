@@ -6,16 +6,30 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     border-bottom: 2px solid black;
-     position: sticky;
+
+    position: sticky;
     top: 0;
-     background-color: rgb(208, 193, 175);
+
+    background-color: rgb(208, 193, 175);
 
 
 }
 
 .header1 {
     margin-right: 3cm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 2px solid black;
+
+    position: sticky;
+    top: 0;
+
+    background-color: rgb(208, 193, 175);
+
 }
 
 .wp-block-heading{
@@ -96,4 +110,39 @@ transform: scale(1.05);
     box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
     text-align: center;
     transition: 0.3s ease;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 60px 20px;
+    
+}
+
+.card:hover {
+    background-color: #cba3a3;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.374); 
+    color: white;
+}
+
+.card {
+    width: 300px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.card h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 18px;
 }
