@@ -6,6 +6,7 @@ while (have_posts()) :
     the_content();
 endwhile;
 ?>
+<div class="wp-block-heading"></div>
 
 </main>
 
