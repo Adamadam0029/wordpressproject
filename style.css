@@ -1,44 +1,114 @@
+
 body {
     background-color: rgb(208, 193, 175);
+    margin: 0;
+    padding: 0;
 }
 
-header {
+
+header,
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     border-bottom: 2px solid black;
-
     position: sticky;
     top: 0;
-
     background-color: rgb(208, 193, 175);
-
-
+    z-index: 1000;
 }
 
-.header1 {
+.header {
     margin-right: 3cm;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    border-bottom: 2px solid black;
-
-    position: sticky;
-    top: 0;
-
-    background-color: rgb(208, 193, 175);
-
 }
 
-.wp-block-heading{
-    font-size: 70px;
-    margin-bottom: 15px;
+
+#clock {
+    flex: 1;
     text-align: center;
-    padding: 100px 20px;
+    margin-left: 4cm;
+    font-size: 24px;
+    font-weight: bold;
 }
 
+
+.wp-block-heading.has-text-align-center {
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 10px !important;
+    padding-top: 40px;
+    padding-bottom: 5px;
+    font-weight: 700;
+}
+
+
+p.has-text-align-center {
+    max-width: 900px;
+    margin: 0 auto 40px auto !important;
+    line-height: 1.8;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.wp-element-button {
+    background-color: black !important;
+    color: white !important;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.wp-element-button:hover {
+    transform: scale(1.05);
+}
+
+.wp-block-button__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 40px 20px 80px;
+}
+
+
+.card {
+    width: 300px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+
+.card:hover {
+    background-color: #cba3a3;
+    color: white;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+.card h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+
+.card p {
+    font-size: 18px;
+    line-height: 1.6;
+}
 
 
 @keyframes scroll {
@@ -51,98 +121,201 @@ header {
     }
 }
 
-#clock {
-    flex: 1;
+
+/* ===== NAVBAR ===== */
+
+header,
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(208, 193, 175, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* WordPress menu links */
+
+.wp-block-navigation {
+    gap: 25px;
+}
+
+.wp-block-navigation a {
+    text-decoration: none !important;
+    color: black !important;
+    font-weight: 600;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.wp-block-navigation a:hover {
+    color: #8b5e5e !important;
+}
+
+.wp-block-navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: #8b5e5e;
+    transition: 0.3s;
+}
+
+.wp-block-navigation a:hover::after {
+    width: 100%;
+}
+
+/* ===== TITELS ===== */
+
+.wp-block-heading.has-text-align-center {
+    font-size: 70px;
     text-align: center;
-    margin-left: 4cm;
-    font-size: 24px;
-    font-weight: bold;
+    margin-bottom: 10px !important;
+    padding-top: 40px;
+    padding-bottom: 5px;
+    font-weight: 700;
 }
 
-.wp-block-heading {
-    font-size: 40px;
-    margin-bottom: 15px;
+/* ===== PARAGRAFEN ===== */
 
+p.has-text-align-center {
+    max-width: 900px;
+    margin: 0 auto 40px auto !important;
+    line-height: 1.8;
+    font-size: 20px;
+    text-align: center;
 }
 
-.wp-element-button{
-     background-color: black;
-    color: white;
+/* ===== BUTTONS ===== */
+
+.wp-element-button {
+    background-color: black !important;
+    color: white !important;
     text-decoration: none;
     padding: 15px 30px;
-    border-radius: 10px;
-    transition: 0.3s;
-
-}
-
-.wp-element-button:Hover{
-transform: scale(1.05);
-}
-
-.wp-block-button__link {
-    display: flex;}
-.wp-block-button__link wp-element-button {
-    display: inline !important;
-    justify-content: center;
-    gap: 20px;
-}
-
-.wp-block-heading has-text-align-center{
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-.wp-block-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin: 60px 20px;
-
-        background-color: #cba3a3;
-    transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.374); 
-    color: white;
-
-     width: 300px;
-    background-color: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
-    text-align: center;
+    border-radius: 12px;
     transition: 0.3s ease;
 }
+
+.wp-element-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+
+/* ===== AI KAARTEN ===== */
 
 .cards {
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
-    margin: 60px 20px;
-    
-}
-
-.card:hover {
-    background-color: #cba3a3;
-    transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.374); 
-    color: white;
+    margin: 50px 20px 80px;
 }
 
 .card {
     width: 300px;
-    background-color: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.12);
     text-align: center;
     transition: 0.3s ease;
 }
 
+.card:hover {
+    background-color: #cba3a3;
+    color: white;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.2);
+}
+
 .card h3 {
-    font-size: 30px;
+    font-size: 32px;
     margin-bottom: 15px;
 }
 
 .card p {
     font-size: 18px;
+    line-height: 1.6;
+}
+
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 80px;
+    border-top: 1px solid rgba(0,0,0,.15);
+    font-size: 18px;
+}
+
+.quiz {
+    padding: 20px 0;
+}
+
+.quiz h2 {
+    font-size: 18px;
+    color: #000000;
+    font-weight: 600;
+}
+.btn1 {
+background: #ffffff;
+color: rgb(0, 0, 0);
+font-weight: 500;
+width: 100%;
+border: 2px solid rgb(0, 0, 0);
+padding: 10px;
+margin: 10px 0;
+text-align: left;
+border-radius: 4px;
+cursor: pointer;
+
+}
+
+
+#btn1:hover{
+    background-color: #000000;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.374); 
+    color: rgb(255, 255, 255);
+}
+#next-btn{
+    background: #000000;
+    color: #ffffff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px ;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+
+}
+
+.correct {
+    background: #9aeabc;
+color: rgb(0, 0, 0);
+font-weight: 500;
+width: 100%;
+border: 2px solid rgb(255, 0, 0);
+padding: 10px;
+margin: 10px 0;
+text-align: left;
+border-radius: 4px;
+cursor: pointer;
+transition: all 0.3s;
+}
+
+.incorrect{
+    background: #ff9393;
 }
