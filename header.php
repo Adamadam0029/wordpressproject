@@ -15,7 +15,7 @@
         <a href="<?php echo home_url(); ?>">
       
         </a>
-        <a href="index.html">
+        <a href="index.php">
 
     </a>
 
@@ -24,8 +24,8 @@
     <nav class="header1">
         <a class="woordenbox" href="<?php echo home_url(); ?>">Home</a>
         <a class="woordenbox" href="<?php echo home_url('/Ai'); ?>">AI</a>
-        <a class="woordenbox" href="#">Nepnieuws</a>
-        <a class="woordenbox" href="#">Tips</a>
+        <a class="woordenbox" href="<?php echo home_url('/Nepnieuws'); ?>">Nepnieuws</a>
+        <a class="woordenbox" href="<?php echo home_url('/Tips'); ?>">Tips</a>
         <a class="woordenbox" href="<?php echo home_url('/quiz'); ?>">Quiz</a>
     </nav>
 </header>
