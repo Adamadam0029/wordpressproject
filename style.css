@@ -1,3 +1,21 @@
+/*
+IMPORTANT: this file assumes your real style.css already has the required
+WordPress theme header comment block at the very top, e.g.:
+
+Theme Name: Your Theme
+Author: ...
+Version: 1.0
+(etc.)
+
+Paste everything below UNDER that existing header comment - do not remove it,
+WordPress needs it to recognize the theme.
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 body {
     background-color: rgb(208, 193, 175);
@@ -5,23 +23,20 @@ body {
     padding: 0;
 }
 
+/* ===== NAVBAR ===== */
 
-header,
-.header {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid black;
+    background-color: rgba(208, 193, 175, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 15px 40px;
     position: sticky;
     top: 0;
-    background-color: rgb(208, 193, 175);
     z-index: 1000;
 }
-
-.header {
-    margin-right: 3cm;
-}
-
 
 #clock {
     flex: 1;
@@ -29,113 +44,6 @@ header,
     margin-left: 4cm;
     font-size: 24px;
     font-weight: bold;
-}
-
-
-.wp-block-heading.has-text-align-center {
-    font-size: 70px;
-    text-align: center;
-    margin-bottom: 10px !important;
-    padding-top: 40px;
-    padding-bottom: 5px;
-    font-weight: 700;
-}
-
-
-p.has-text-align-center {
-    max-width: 900px;
-    margin: 0 auto 40px auto !important;
-    line-height: 1.8;
-    font-size: 20px;
-    text-align: center;
-}
-
-
-.wp-element-button {
-    background-color: black !important;
-    color: white !important;
-    text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-}
-
-.wp-element-button:hover {
-    transform: scale(1.05);
-}
-
-.wp-block-button__link {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin: 40px 20px 80px;
-}
-
-
-.card {
-    width: 300px;
-    background-color: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-
-.card:hover {
-    background-color: #cba3a3;
-    color: white;
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-}
-
-
-.card h3 {
-    font-size: 30px;
-    margin-bottom: 15px;
-}
-
-
-.card p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-
-@keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
-}
-
-
-/* ===== NAVBAR ===== */
-
-header,
-.header1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(208, 193, 175, 0.95);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(0,0,0,0.15);
-    padding: 15px 40px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 /* WordPress menu links */
@@ -205,7 +113,13 @@ p.has-text-align-center {
 
 .wp-element-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
+}
+
+.wp-block-button__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ===== AI KAARTEN ===== */
@@ -220,11 +134,11 @@ p.has-text-align-center {
 
 .card {
     width: 300px;
-    background: rgba(255,255,255,0.75);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(10px);
     padding: 30px;
     border-radius: 25px;
-    box-shadow: 0 8px 25px rgba(0,0,0,.12);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .12);
     text-align: center;
     transition: 0.3s ease;
 }
@@ -233,7 +147,7 @@ p.has-text-align-center {
     background-color: #cba3a3;
     color: white;
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .2);
 }
 
 .card h3 {
@@ -246,7 +160,15 @@ p.has-text-align-center {
     line-height: 1.6;
 }
 
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
 
+    to {
+        transform: translateX(-50%);
+    }
+}
 
 /* ===== FOOTER ===== */
 
@@ -254,9 +176,11 @@ footer {
     text-align: center;
     padding: 30px;
     margin-top: 80px;
-    border-top: 1px solid rgba(0,0,0,.15);
+    border-top: 1px solid rgba(0, 0, 0, .15);
     font-size: 18px;
 }
+
+/* ===== QUIZ ===== */
 
 .quiz {
     padding: 20px 0;
@@ -267,60 +191,63 @@ footer {
     color: #000000;
     font-weight: 600;
 }
-.btn1 {
-background: #ffffff;
-color: rgb(0, 0, 0);
-font-weight: 500;
-width: 100%;
-border: 2px solid rgb(0, 0, 0);
-padding: 10px;
-margin: 10px 0;
-text-align: left;
-border-radius: 4px;
-cursor: pointer;
 
+.btn1 {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    width: 100%;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-
-#btn1:hover{
+/* Fixed: this rule used to target #btn1 (an ID that doesn't exist)
+   instead of .btn1 (the class actually used on the buttons), so the
+   hover effect never worked. */
+.btn1:hover {
     background-color: #000000;
     transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.374); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.374);
     color: rgb(255, 255, 255);
 }
-#next-btn{
+
+#next-btn {
     background: #000000;
     color: #ffffff;
     font-weight: 500;
     width: 150px;
     border: 0;
-    padding: 10px ;
+    padding: 10px;
     margin: 20px auto 0;
     border-radius: 4px;
     cursor: pointer;
     display: none;
-
 }
 
 .correct {
     background: #9aeabc;
-color: rgb(0, 0, 0);
-font-weight: 500;
-width: 100%;
-border: 2px solid rgb(255, 0, 0);
-padding: 10px;
-margin: 10px 0;
-text-align: left;
-border-radius: 4px;
-cursor: pointer;
-transition: all 0.3s;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    width: 100%;
+    border: 2px solid rgb(255, 0, 0);
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
-.incorrect{
+.incorrect {
     background: #ff9393;
 }
 
-a{
+a {
     display: inline-block;
     padding: 0.1cm;
     background-color: rgb(208, 193, 175);
@@ -329,4 +256,40 @@ a{
     color: rgb(0, 0, 0);
     transition: 0.3s ease;
     margin: 0.2cm;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        padding: 10px 20px;
+        row-gap: 10px;
+    }
+
+    #clock {
+        margin-left: 0;
+        flex: 0 0 100%;
+        order: 3;
+        font-size: 18px;
+    }
+
+    .wp-block-heading.has-text-align-center {
+        font-size: 40px;
+        padding-top: 20px;
+    }
+
+    p.has-text-align-center {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    .cards {
+        margin: 30px 10px 50px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+    }
 }

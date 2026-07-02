@@ -1,8 +1,9 @@
-<footer>
-    <p>&copy; 2026 - Ekrem & Adam</p>
-</footer>
+</main>
 
-<?php wp_footer(); ?>
+	<footer>
+		<p>&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?></p>
+	</footer>
 
+	<?php wp_footer(); ?>
 </body>
 </html>
